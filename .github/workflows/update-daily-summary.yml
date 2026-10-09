@@ -1,0 +1,66 @@
+name: Update Daily Safety Summary
+
+on:
+  repository_dispatch:
+    types: [update-daily-summary]
+
+permissions:
+  contents: write
+
+jobs:
+  update-summary:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Write daily summary
+        env:
+          SUMMARY: ${{ toJson(github.event.client_payload) }}
+        run: |
+          python3 <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          summary = json.loads(os.environ["SUMMARY"])
+
+          path = Path("daily-safety-summary.json")
+
+          path.write_text(
+              json.dumps(
+                  summary,
+                  indent=2,
+                  ensure_ascii=False
+              ) + "\n",
+              encoding="utf-8"
+          )
+
+          print(
+              f"Summary date: {summary.get('Date')}"
+          )
+
+          print(
+              f"Total forms: {summary.get('TotalForms')}"
+          )
+
+          print(
+              f"Contractors reporting: "
+              f"{summary.get('ContractorsReporting')}"
+          )
+          PY
+
+      - name: Commit daily summary
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add daily-safety-summary.json
+
+          if git diff --cached --quiet; then
+            echo "No summary changes to commit."
+          else
+            git commit -m "Update daily safety summary"
+            git push
+          fi
