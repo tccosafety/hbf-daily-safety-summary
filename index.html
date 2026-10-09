@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HBF Daily Safety Form Summary</title>
+
+  <style>
+    :root {
+      --navy: #002855;
+      --background: #f3f5f7;
+      --card: #ffffff;
+      --border: #d9dee5;
+      --text: #17212b;
+      --muted: #66727f;
+      --accent: #063b75;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      background: var(--background);
+      color: var(--text);
+    }
+
+    header {
+      background: var(--navy);
+      color: white;
+      padding: 24px 18px;
+    }
+
+    .header-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .project-label {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      opacity: 0.8;
+      margin-bottom: 5px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 27px;
+      line-height: 1.2;
+    }
+
+    .header-subtitle {
+      margin-top: 8px;
+      font-size: 15px;
+      opacity: 0.9;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 22px 16px 40px;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .summary-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px;
+      text-align: center;
+    }
+
+    .summary-number {
+      display: block;
+      font-size: 30px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+      margin-bottom: 7px;
+    }
+
+    .summary-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--muted);
+    }
+
+    .contractor-section {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    .contractor-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      padding: 15px 18px;
+      border-bottom: 2px solid var(--navy);
+    }
+
+    .contractor-name {
+      margin: 0;
+      color: var(--navy);
+      font-size: 19px;
+      font-weight: 750;
+    }
+
+    .contractor-total {
+      flex-shrink: 0;
+      background: var(--navy);
+      color: white;
+      border-radius: 999px;
+      padding: 6px 11px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .form-list {
+      padding: 4px 18px;
+    }
+
+    .form-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .form-row:last-child {
+      border-bottom: none;
+    }
+
+    .form-name {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .form-count {
+      min-width: 34px;
+      text-align: center;
+      background: #eef2f6;
+      border-radius: 6px;
+      padding: 5px 9px;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .message {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    .message-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    .message-text {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .error {
+      border-left: 5px solid #c62828;
+    }
+
+    footer {
+      margin-top: 28px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+
+      header {
+        padding: 19px 16px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      main {
+        padding: 16px 12px 30px;
+      }
+
+      .summary {
+        gap: 8px;
+      }
+
+      .summary-card {
+        padding: 15px 8px;
+      }
+
+      .summary-number {
+        font-size: 26px;
+      }
+
+      .summary-label {
+        font-size: 10px;
+      }
+
+      .contractor-header {
+        padding: 14px;
+      }
+
+      .contractor-name {
+        font-size: 17px;
+      }
+
+      .form-list {
+        padding: 3px 14px;
+      }
+
+      .form-row {
+        padding: 12px 0;
+      }
+
+      .form-name {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+
+    <div class="project-label">
+      Huntington Bank Field
+    </div>
+
+    <h1>
+      Daily Safety Form Summary
+    </h1>
+
+    <div
+      class="header-subtitle"
+      id="summaryDate">
+      Previous Day Activity
+    </div>
+
+  </div>
+</header>
+
+
+<main>
+
+  <section
+    class="summary"
+    id="summaryCounters"
+    style="display:none;">
+
+    <div class="summary-card">
+
+      <span
+        class="summary-number"
+        id="totalForms">
+        0
+      </span>
+
+      <span class="summary-label">
+        Forms Submitted
+      </span>
+
+    </div>
+
+
+    <div class="summary-card">
+
+      <span
+        class="summary-number"
+        id="contractorsReporting">
+        0
+      </span>
+
+      <span class="summary-label">
+        Contractors Reporting
+      </span>
+
+    </div>
+
+  </section>
+
+
+  <div id="contractorContainer">
+
+    <div class="message">
+
+      <div class="message-title">
+        Loading safety summary...
+      </div>
+
+      <div class="message-text">
+        Retrieving previous-day activity.
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <footer>
+
+    <div>
+      Summary reflects safety forms submitted for the previous calendar date.
+    </div>
+
+    <div>
+      Data is aggregated by contractor and form type.
+    </div>
+
+  </footer>
+
+</main>
+
+
+<script>
+
+  const DATA_FILE = "./daily-safety-summary.json";
+
+
+  function escapeHtml(value) {
+
+    if (value === null || value === undefined) {
+      return "";
+    }
+
+    return String(value)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+
+
+  function formatSummaryDate(dateString) {
+
+    if (!dateString) {
+      return "Previous Day Activity";
+    }
+
+    /*
+     * Add a midday time so browsers do not shift the
+     * date backward because of UTC timezone conversion.
+     */
+
+    const date =
+      new Date(`${dateString}T12:00:00`);
+
+    if (Number.isNaN(date.getTime())) {
+      return "Previous Day Activity";
+    }
+
+    return date.toLocaleDateString(
+      undefined,
+      {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      }
+    );
+  }
+
+
+  function renderSummary(data) {
+
+    const container =
+      document.getElementById(
+        "contractorContainer"
+      );
+
+    const counters =
+      document.getElementById(
+        "summaryCounters"
+      );
+
+
+    document.getElementById(
+      "summaryDate"
+    ).textContent =
+      `${formatSummaryDate(data.Date)} — Previous Day Activity`;
+
+
+    document.getElementById(
+      "totalForms"
+    ).textContent =
+      data.TotalForms ?? 0;
+
+
+    document.getElementById(
+      "contractorsReporting"
+    ).textContent =
+      data.ContractorsReporting ?? 0;
+
+
+    counters.style.display = "grid";
+
+
+    const contractors =
+      Array.isArray(data.Contractors)
+        ? data.Contractors
+        : [];
+
+
+    if (contractors.length === 0) {
+
+      container.innerHTML = `
+        <div class="message">
+
+          <div class="message-title">
+            No safety forms submitted
+          </div>
+
+          <div class="message-text">
+            No contractor safety-form submissions
+            were recorded for this date.
+          </div>
+
+        </div>
+      `;
+
+      return;
+    }
+
+
+    /*
+     * Sort contractors alphabetically.
+     */
+
+    contractors.sort(
+      (a, b) =>
+        String(a.Contractor || "")
+          .localeCompare(
+            String(b.Contractor || "")
+          )
+    );
+
+
+    let html = "";
+
+
+    contractors.forEach(contractor => {
+
+      const contractorName =
+        escapeHtml(
+          contractor.Contractor ||
+          "Contractor Not Listed"
+        );
+
+      const contractorTotal =
+        Number(contractor.Total || 0);
+
+      const forms =
+        Array.isArray(contractor.Forms)
+          ? contractor.Forms
+          : [];
+
+
+      /*
+       * Sort form types alphabetically.
+       */
+
+      forms.sort(
+        (a, b) =>
+          String(a.FormType || "")
+            .localeCompare(
+              String(b.FormType || "")
+            )
+      );
+
+
+      html += `
+        <section class="contractor-section">
+
+          <div class="contractor-header">
+
+            <h2 class="contractor-name">
+              ${contractorName}
+            </h2>
+
+            <span class="contractor-total">
+              ${contractorTotal}
+              ${contractorTotal === 1 ? "Form" : "Forms"}
+            </span>
+
+          </div>
+
+          <div class="form-list">
+      `;
+
+
+      forms.forEach(form => {
+
+        const formName =
+          escapeHtml(
+            form.FormType ||
+            "Form Type Not Listed"
+          );
+
+        const formCount =
+          Number(form.Count || 0);
+
+
+        html += `
+          <div class="form-row">
+
+            <div class="form-name">
+              ${formName}
+            </div>
+
+            <div class="form-count">
+              ${formCount}
+            </div>
+
+          </div>
+        `;
+
+      });
+
+
+      html += `
+          </div>
+        </section>
+      `;
+
+    });
+
+
+    container.innerHTML = html;
+  }
+
+
+  async function loadSummary() {
+
+    try {
+
+      const response =
+        await fetch(
+          `${DATA_FILE}?v=${Date.now()}`,
+          {
+            cache: "no-store"
+          }
+        );
+
+
+      if (!response.ok) {
+
+        throw new Error(
+          `HTTP ${response.status}`
+        );
+
+      }
+
+
+      const data =
+        await response.json();
+
+
+      if (
+        !data ||
+        typeof data !== "object" ||
+        Array.isArray(data)
+      ) {
+
+        throw new Error(
+          "Daily summary data is invalid."
+        );
+
+      }
+
+
+      renderSummary(data);
+
+
+    } catch (error) {
+
+      console.error(
+        "Unable to load daily summary:",
+        error
+      );
+
+
+      document.getElementById(
+        "summaryCounters"
+      ).style.display = "none";
+
+
+      document.getElementById(
+        "contractorContainer"
+      ).innerHTML = `
+        <div class="message error">
+
+          <div class="message-title">
+            Unable to load daily summary
+          </div>
+
+          <div class="message-text">
+            Please refresh the page or try again shortly.
+          </div>
+
+        </div>
+      `;
+
+    }
+
+  }
+
+
+  loadSummary();
+
+</script>
+
+</body>
+</html>
