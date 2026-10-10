@@ -1,21 +1,6 @@
 {
-  "Contractors": [
-    {
-      "Contractor": "Turner",
-      "Forms": [
-        {
-          "Count": 1,
-          "FormType": "Pre-Task Plan"
-        },
-        {
-          "Count": 1,
-          "FormType": "JHA"
-        }
-      ],
-      "Total": 2
-    }
-  ],
-  "ContractorsReporting": 1,
-  "Date": "2026-10-08",
-  "TotalForms": 2
+  "Contractors": [],
+  "ContractorsReporting": 0,
+  "Date": "2026-10-09",
+  "TotalForms": 0
 }
