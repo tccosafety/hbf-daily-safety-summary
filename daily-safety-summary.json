@@ -1,6 +1,39 @@
 {
-  "Contractors": [],
-  "ContractorsReporting": 0,
+  "Contractors": [
+    {
+      "Contractor": "Independence Excavating",
+      "Forms": [
+        {
+          "Count": 1,
+          "FormType": "Pre-Task Plan"
+        },
+        {
+          "Count": 1,
+          "FormType": "Surface Penetration Request Form"
+        }
+      ],
+      "Total": 2
+    },
+    {
+      "Contractor": "Colasanti",
+      "Forms": [
+        {
+          "Count": 1,
+          "FormType": "Ladders Last Permit"
+        },
+        {
+          "Count": 1,
+          "FormType": "Crane Inspection"
+        },
+        {
+          "Count": 1,
+          "FormType": "Pre-Task Plan"
+        }
+      ],
+      "Total": 3
+    }
+  ],
+  "ContractorsReporting": 2,
   "Date": "2026-10-28",
-  "TotalForms": 0
+  "TotalForms": 5
 }
