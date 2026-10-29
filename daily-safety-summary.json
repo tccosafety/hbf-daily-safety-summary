@@ -28,12 +28,16 @@
         {
           "Count": 1,
           "FormType": "Pre-Task Plan"
+        },
+        {
+          "Count": 1,
+          "FormType": "JSA"
         }
       ],
-      "Total": 3
+      "Total": 4
     }
   ],
   "ContractorsReporting": 2,
   "Date": "2026-10-28",
-  "TotalForms": 5
+  "TotalForms": 6
 }
