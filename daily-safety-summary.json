@@ -6,38 +6,32 @@
         {
           "Count": 1,
           "FormType": "Pre-Task Plan"
-        },
-        {
-          "Count": 1,
-          "FormType": "Surface Penetration Request Form"
         }
       ],
-      "Total": 2
+      "Total": 1
+    },
+    {
+      "Contractor": "",
+      "Forms": [
+        {
+          "Count": 1,
+          "FormType": "Ladders Last Permit"
+        }
+      ],
+      "Total": 1
     },
     {
       "Contractor": "Colasanti",
       "Forms": [
         {
-          "Count": 1,
-          "FormType": "Ladders Last Permit"
-        },
-        {
-          "Count": 1,
-          "FormType": "Crane Inspection"
-        },
-        {
-          "Count": 1,
-          "FormType": "Pre-Task Plan"
-        },
-        {
-          "Count": 1,
+          "Count": 2,
           "FormType": "JSA"
         }
       ],
-      "Total": 4
+      "Total": 2
     }
   ],
-  "ContractorsReporting": 2,
-  "Date": "2026-10-28",
-  "TotalForms": 6
+  "ContractorsReporting": 3,
+  "Date": "2026-10-29",
+  "TotalForms": 4
 }
