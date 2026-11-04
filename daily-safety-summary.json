@@ -4,18 +4,14 @@
       "Contractor": "",
       "Forms": [
         {
-          "Count": 1,
+          "Count": 2,
           "FormType": "Pre-Task Plan"
-        },
-        {
-          "Count": 1,
-          "FormType": "Surface Penetration Request Form"
         }
       ],
       "Total": 2
     }
   ],
   "ContractorsReporting": 1,
-  "Date": "2026-11-02",
+  "Date": "2026-11-03",
   "TotalForms": 2
 }
