@@ -6,16 +6,12 @@
         {
           "Count": 3,
           "FormType": "Pre-Task Plan"
-        },
-        {
-          "Count": 1,
-          "FormType": "Surface Penetration Request Form"
         }
       ],
-      "Total": 4
+      "Total": 3
     }
   ],
   "ContractorsReporting": 1,
-  "Date": "2026-11-04",
-  "TotalForms": 4
+  "Date": "2026-11-05",
+  "TotalForms": 3
 }
