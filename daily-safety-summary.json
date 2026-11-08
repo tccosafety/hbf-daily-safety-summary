@@ -1,21 +1,17 @@
 {
   "Contractors": [
     {
-      "Contractor": "",
+      "Contractor": "Michels",
       "Forms": [
         {
           "Count": 1,
-          "FormType": "Ladders Last Permit"
-        },
-        {
-          "Count": 3,
           "FormType": "Pre-Task Plan"
         }
       ],
-      "Total": 4
+      "Total": 1
     }
   ],
   "ContractorsReporting": 1,
-  "Date": "2026-11-06",
-  "TotalForms": 4
+  "Date": "2026-11-07",
+  "TotalForms": 1
 }
