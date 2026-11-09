@@ -1,17 +1,6 @@
 {
-  "Contractors": [
-    {
-      "Contractor": "Michels",
-      "Forms": [
-        {
-          "Count": 1,
-          "FormType": "Pre-Task Plan"
-        }
-      ],
-      "Total": 1
-    }
-  ],
-  "ContractorsReporting": 1,
-  "Date": "2026-11-07",
-  "TotalForms": 1
+  "Contractors": [],
+  "ContractorsReporting": 0,
+  "Date": "2026-11-08",
+  "TotalForms": 0
 }
