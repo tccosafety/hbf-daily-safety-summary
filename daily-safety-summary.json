@@ -1,6 +1,45 @@
 {
-  "Contractors": [],
-  "ContractorsReporting": 0,
-  "Date": "2026-11-08",
-  "TotalForms": 0
+  "Contractors": [
+    {
+      "Contractor": "Independence Excavating",
+      "Forms": [
+        {
+          "Count": 1,
+          "FormType": "Pre-Task Plan"
+        }
+      ],
+      "Total": 1
+    },
+    {
+      "Contractor": "Turner Self-Perform",
+      "Forms": [
+        {
+          "Count": 1,
+          "FormType": "Pre-Task Plan"
+        }
+      ],
+      "Total": 1
+    },
+    {
+      "Contractor": "Colasanti",
+      "Forms": [
+        {
+          "Count": 1,
+          "FormType": "Ladders Last Permit"
+        },
+        {
+          "Count": 1,
+          "FormType": "Initial Equipment Inspection - Off Road Heavy Equip"
+        },
+        {
+          "Count": 3,
+          "FormType": "JSA"
+        }
+      ],
+      "Total": 5
+    }
+  ],
+  "ContractorsReporting": 3,
+  "Date": "2026-11-09",
+  "TotalForms": 7
 }
