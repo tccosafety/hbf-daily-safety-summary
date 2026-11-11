@@ -11,6 +11,16 @@
       "Total": 1
     },
     {
+      "Contractor": "Michels",
+      "Forms": [
+        {
+          "Count": 1,
+          "FormType": "Pre-Task Plan"
+        }
+      ],
+      "Total": 1
+    },
+    {
       "Contractor": "Turner Self-Perform",
       "Forms": [
         {
@@ -25,10 +35,6 @@
       "Forms": [
         {
           "Count": 1,
-          "FormType": "Ladders Last Permit"
-        },
-        {
-          "Count": 1,
           "FormType": "Initial Equipment Inspection - Off Road Heavy Equip"
         },
         {
@@ -36,10 +42,20 @@
           "FormType": "JSA"
         }
       ],
-      "Total": 5
+      "Total": 4
+    },
+    {
+      "Contractor": "Sun Coast",
+      "Forms": [
+        {
+          "Count": 1,
+          "FormType": "Pre-Task Plan"
+        }
+      ],
+      "Total": 1
     }
   ],
-  "ContractorsReporting": 3,
-  "Date": "2026-11-09",
-  "TotalForms": 7
+  "ContractorsReporting": 5,
+  "Date": "2026-11-10",
+  "TotalForms": 8
 }
