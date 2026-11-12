@@ -11,16 +11,6 @@
       "Total": 1
     },
     {
-      "Contractor": "Michels",
-      "Forms": [
-        {
-          "Count": 1,
-          "FormType": "Pre-Task Plan"
-        }
-      ],
-      "Total": 1
-    },
-    {
       "Contractor": "Turner Self-Perform",
       "Forms": [
         {
@@ -31,6 +21,20 @@
       "Total": 1
     },
     {
+      "Contractor": "Michels",
+      "Forms": [
+        {
+          "Count": 1,
+          "FormType": "Pre-Task Plan"
+        },
+        {
+          "Count": 1,
+          "FormType": "Toolbox Talk"
+        }
+      ],
+      "Total": 2
+    },
+    {
       "Contractor": "Colasanti",
       "Forms": [
         {
@@ -38,11 +42,11 @@
           "FormType": "Initial Equipment Inspection - Off Road Heavy Equip"
         },
         {
-          "Count": 3,
+          "Count": 4,
           "FormType": "JSA"
         }
       ],
-      "Total": 4
+      "Total": 5
     },
     {
       "Contractor": "Sun Coast",
@@ -56,6 +60,6 @@
     }
   ],
   "ContractorsReporting": 5,
-  "Date": "2026-11-10",
-  "TotalForms": 8
+  "Date": "2026-11-11",
+  "TotalForms": 10
 }
