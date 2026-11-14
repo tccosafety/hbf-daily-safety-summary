@@ -1,27 +1,6 @@
 {
-  "Contractors": [
-    {
-      "Contractor": "Turner Self-Perform",
-      "Forms": [
-        {
-          "Count": 1,
-          "FormType": "Pre-Task Plan"
-        }
-      ],
-      "Total": 1
-    },
-    {
-      "Contractor": "Colasanti",
-      "Forms": [
-        {
-          "Count": 1,
-          "FormType": "Initial Equipment Inspection - Off Road Heavy Equip"
-        }
-      ],
-      "Total": 1
-    }
-  ],
-  "ContractorsReporting": 2,
-  "Date": "2026-11-12",
-  "TotalForms": 2
+  "Contractors": [],
+  "ContractorsReporting": 0,
+  "Date": "2026-11-13",
+  "TotalForms": 0
 }
